@@ -1,0 +1,15 @@
+.custom-indicator {
+    margin-bottom: -65px;
+}
+.custom-indicator li{
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.css-1wnsr1i {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 450px !important;
+    height: 450px !important;
+}
