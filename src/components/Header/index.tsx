@@ -17,6 +17,8 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { removeCart } from "../../features/cart/cartSlide";
 import productOne from "../../assets/images/image-product-1-thumbnail.jpg";
 import deleteCart from "../../assets/images/icon-delete.svg";
+import { useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 
 Header.propTypes = {};
 
@@ -59,6 +61,13 @@ const useStyles = makeStyles((theme) => ({
   cart_icon: {
     width: "40px",
     height: "40px",
+  },
+  box_avt: {
+    margin: "0 20px",
+    width: "42px",
+    height: "42px",
+    borderRadius: "50%",
+    "&:hover": { border: "2px solid #ff7d1a" },
   },
   avatar: {
     width: "38px",
@@ -136,7 +145,7 @@ function Header(props: any) {
                   </span>
                 ))}
               </Box>
-              <Box style={{ margin: "0 20px" }}>
+              <Box className={classes.box_avt} style={{}}>
                 <img src={Avatar} alt="" className={classes.avatar} />
               </Box>
               <Popover
@@ -155,7 +164,11 @@ function Header(props: any) {
                 }}
               >
                 <Box
-                  style={{ width: "300px", height: "auto", minHeight: "200px" }}
+                  style={{
+                    width: "300px",
+                    height: "auto",
+                    minHeight: "200px",
+                  }}
                 >
                   <Typography style={{ fontWeight: "bold" }} sx={{ p: 2 }}>
                     Cart
@@ -230,7 +243,10 @@ function Header(props: any) {
                           </Box>
                         </Box>
                         <Box
-                          style={{ width: "100%", padding: "0 20px 20px 20px" }}
+                          style={{
+                            width: "100%",
+                            padding: "0 20px 20px 20px",
+                          }}
                         >
                           <Button
                             style={{
